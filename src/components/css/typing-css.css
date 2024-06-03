@@ -1,0 +1,179 @@
+/* h1 {
+  font-size: 9vmin;
+  color: #8bf;
+  text-align: left;
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+} */
+
+/* Typewriter effect 1 */
+@keyframes typing {
+  0.0000%,
+  23.0000% {
+    content: "";
+  }
+  1.0000%,
+  22.0000% {
+    content: "D";
+  }
+  2.0000%,
+  21.0000% {
+    content: "De";
+  }
+  3.0000%,
+  20.0000% {
+    content: "Dev";
+  }
+  4.0000%,
+  19.0000% {
+    content: "Deve";
+  }
+  5.0000%,
+  18.0000% {
+    content: "Devel";
+  }
+  6.0000%,
+  17.0000% {
+    content: "Develo";
+  }
+  7.0000%,
+  16.0000% {
+    content: "Develop";
+  }
+  8.0000%,
+  15.0000% {
+    content: "Develope";
+  }
+  9.0000%,
+  14.0000% {
+    content: "Developer.";
+  }
+
+  30.0000%,
+  50.0000% {
+    content: "";
+  }
+  31.0000%,
+  49.0000% {
+    content: "D";
+  }
+  32.0000%,
+  48.0000% {
+    content: "De";
+  }
+  33.0000%,
+  47.0000% {
+    content: "Des";
+  }
+  34.0000%,
+  46.0000% {
+    content: "Desi";
+  }
+  35.0000%,
+  45.0000% {
+    content: "Desig";
+  }
+  36.0000%,
+  44.0000% {
+    content: "Design";
+  }
+  37.0000%,
+  43.0000% {
+    content: "Designe";
+  }
+  38.0000%,
+  42.0000% {
+    content: "Designer.";
+  }
+
+  60.0000%,
+  80.0000% {
+    content: "";
+  }
+  61.0000%,
+  79.0000% {
+    content: "L";
+  }
+  62.0000%,
+  78.0000% {
+    content: "Le";
+  }
+  63.0000%,
+  77.0000% {
+    content: "Lea";
+  }
+  64.0000%,
+  76.0000% {
+    content: "Lear";
+  }
+  65.0000%,
+  75.0000% {
+    content: "Learn";
+  }
+  66.0000%,
+  74.0000% {
+    content: "Learne";
+  }
+  67.0000%,
+  73.0000% {
+    content: "Learner.";
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%,
+    100% {
+      content: "developer";
+    }
+    37.5% {
+      content: "designer";
+    }
+    75% {
+      content: "learner";
+    }
+  }
+
+  .typewriter::before {
+    content: "developer";
+    animation: sequencePopup 12s linear infinite;
+  }
+}

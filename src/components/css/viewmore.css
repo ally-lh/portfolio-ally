@@ -1,0 +1,57 @@
+.viewMore {
+  position: relative;
+  padding: 1.4rem 4.2rem;
+  padding-right: 3.1rem;
+  font-size: 1.4rem;
+  color: white;
+  letter-spacing: 1.1rem;
+  text-transform: uppercase;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.viewMore:before,
+.viewMore:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.viewMore:hover {
+  color: #171717;
+  transition-delay: 0.5s;
+}
+
+.viewMore:hover:before {
+  transition-delay: 0s;
+}
+
+.viewMore:hover:after {
+  background: white;
+  transition-delay: 0.35s;
+}
+
+.viewMore.fromLeft:before,
+.viewMore.fromLeft:after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.viewMore.fromLeft:before {
+  right: 0;
+  border: 1px solid white;
+  border-left: 0;
+  border-right: 0;
+}
+
+.viewMore.fromLeft:after {
+  left: 0;
+}
+
+.viewMore.fromLeft:hover:before,
+.viewMore.fromLeft:hover:after {
+  width: 100%;
+}
